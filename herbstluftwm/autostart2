@@ -99,8 +99,8 @@ hc keybind $Mod-BackSpace remove
 hc keybind $Mod-s floating toggle
 hc keybind $Mod-f fullscreen toggle
 hc keybind $Mod-p pseudotile toggle
-hc keybind $Mod-b load '(split horizontal:0.660000:0 (clients vertical:0 0x22000f8) (split vertical:0.600000:0 (clients vertical:0 0xc00009) (clients vertical:0 0xa00009)))'
-hc keybind $Mod-n load '(split horizontal:0.320000:1 (split vertical:0.540000:0 (split vertical:0.440000:0 (split vertical:0.180000:1 (clients vertical:0) (clients vertical:0 0x3200009)) (clients vertical:0)) (split vertical:0.880000:0 (clients vertical:0 0x2e00009) (clients vertical:0))) (split horizontal:0.580000:0 (split vertical:0.660000:0 (split vertical:0.360000:1 (clients vertical:0) (clients vertical:0 0x1c00009)) (clients vertical:0)) (split vertical:0.340000:0 (split vertical:0.120000:1 (clients vertical:0) (clients vertical:0 0x3600009)) (clients vertical:0))))'
+hc keybind $Mod-b load '(split horizontal:0.680000:1 (clients vertical:0) (split vertical:0.600000:1 (clients vertical:0) (clients vertical:0 0x1600009)))'
+hc keybind $Mod-n load '(split horizontal:0.320000:0 (split vertical:0.900000:0 (split vertical:0.540000:1 (split vertical:0.520000:1 (split vertical:0.220000:1 (clients vertical:0) (clients vertical:0 0x1a00009)) (clients vertical:0)) (clients vertical:0 0x1800009)) (clients vertical:0)) (split vertical:0.600000:0 (split horizontal:0.560000:0 (split vertical:0.400000:0 (clients vertical:0) (clients vertical:0 0x1c00009)) (split vertical:0.100000:1 (clients vertical:0) (split vertical:0.520000:0 (clients vertical:0 0x2000009) (clients vertical:0)))) (split horizontal:0.520000:1 (clients vertical:0) (clients vertical:0))))'
 
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
