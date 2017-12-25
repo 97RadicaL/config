@@ -1,0 +1,14 @@
+# Increase volume
+"amixer -D pulse sset Master 5%+"
+   XF86AudioRaiseVolume
+
+# Decrease volume
+"amixer -D pulse sset Master 5%-"
+   XF86AudioLowerVolume
+
+# Toggle mute
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+   XF86AudioMute
+
+# xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
+
