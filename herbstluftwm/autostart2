@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# scarecrow herbstluftwm config
+# slick 1st herbstluftwm config
 
 hc() {
     herbstclient "$@"
@@ -18,7 +18,7 @@ pkill tint2
 tint2 &
 compton &
 xbindkeys &
-feh --bg-fill ~/.config/herbstluftwm/wallpaper.png &
+feh --bg-fill ~/.wallpaper.png --no-fehbg &
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 
 # Mod1=alt Mod4=super
@@ -27,28 +27,29 @@ Mod=Mod4
 # keybindings
 hc keybind $Mod-Shift-Delete quit
 hc keybind $Mod-Shift-r reload
-hc keybind $Mod-q close
+hc keybind $Mod-q close_or_remove
 hc keybind $Mod-Shift-q close_and_remove
 
 # shortcuts
 hc keybind $Mod-Return spawn urxvt
 hc keybind $Mod-d spawn dmenu_run
-hc keybind Control-Alt-l spawn i3lock
+hc keybind Control-Alt-l spawn i3lock -c 111111
 hc keybind $Mod-w spawn firefox-esr
-hc keybind $Mod-Shift-w spawn google-chrome
+hc keybind $Mod-Shift-w spawn palemoon
 hc keybind $Mod-t spawn urxvt -e htop
 hc keybind $Mod-r spawn urxvt -e ranger
 hc keybind $Mod-m spawn urxvt -e cmus
 hc keybind $Mod-Shift-m spawn urxvt -e cava
 hc keybind $Mod-c spawn urxvt -e calcurse
+# browsers
+# firefox, firefox-esr, firefox_old(basilisk), palemoon
 
-# palemoon firefox_old
 
 # screenshot
 hc keybind Print spawn scrot 'scrot_%Y-%m-%d-%S_$wx$h.png'
 
 # padding
-hc pad 0 37 0 0 0
+hc pad 0 15 15 15 15
 
 # basic movement
 # focusing clients
@@ -95,12 +96,12 @@ hc keybind $Mod-g cycle_value window_gap 10 0
 hc keybind $Mod-Shift-g cycle_value frame_transparent_width 0 5
 
 # layouting
-hc keybind $Mod-BackSpace remove
+#hc keybind $Mod-BackSpace remove
 hc keybind $Mod-s floating toggle
 hc keybind $Mod-f fullscreen toggle
 hc keybind $Mod-p pseudotile toggle
-hc keybind $Mod-b load '(split horizontal:0.680000:1 (clients vertical:0) (split vertical:0.600000:1 (clients vertical:0) (clients vertical:0 0x1600009)))'
-hc keybind $Mod-n load '(split horizontal:0.320000:0 (split vertical:0.900000:0 (split vertical:0.540000:1 (split vertical:0.520000:1 (split vertical:0.220000:1 (clients vertical:0) (clients vertical:0 0x1a00009)) (clients vertical:0)) (clients vertical:0 0x1800009)) (clients vertical:0)) (split vertical:0.600000:0 (split horizontal:0.560000:0 (split vertical:0.400000:0 (clients vertical:0) (clients vertical:0 0x1c00009)) (split vertical:0.100000:1 (clients vertical:0) (split vertical:0.520000:0 (clients vertical:0 0x2000009) (clients vertical:0)))) (split horizontal:0.520000:1 (clients vertical:0) (clients vertical:0))))'
+hc keybind $Mod-b load '(split horizontal:0.680000:1 (clients vertical:0 0x1c00078) (split vertical:0.640000:1 (split vertical:0.100000:1 (clients vertical:0) (clients vertical:0 0x600009)) (clients vertical:0 0x3800009)))'
+hc keybind $Mod-n load '(split horizontal:0.540000:0 (split vertical:0.640000:0 (split horizontal:0.340000:0 (split vertical:0.520000:0 (split vertical:0.220000:1 (clients vertical:0) (clients vertical:0 0x1600009)) (clients vertical:0)) (split vertical:0.900000:0 (split vertical:0.720000:1 (clients vertical:0) (clients vertical:0 0x1200009)) (clients vertical:0))) (split horizontal:0.580000:0 (clients vertical:0 0x4800009) (clients vertical:0))) (split horizontal:0.840000:0 (split horizontal:0.220000:1 (clients vertical:0) (split vertical:0.900000:0 (split vertical:0.180000:1 (clients vertical:0) (clients vertical:0 0x1000009)) (clients vertical:0))) (clients vertical:0)))'
 
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
@@ -153,13 +154,13 @@ hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
 hc set frame_gap 0
 
-hc attr theme.active.color '#42544D'
-hc attr theme.normal.color '#42544D'
+hc attr theme.active.color '#ADDD69'
+hc attr theme.normal.color '#6B92EF'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
-hc attr theme.border_width 2
-hc attr theme.floating.border_width 2
+hc attr theme.border_width 4
+hc attr theme.floating.border_width 3
 hc attr theme.floating.outer_width 0
 hc attr theme.floating.outer_color black
 hc attr theme.active.inner_color '#'
