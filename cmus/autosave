@@ -1,4 +1,4 @@
-set aaa_mode=all
+set aaa_mode=artist
 set altformat_current= %F 
 set altformat_playlist= %f%= %d 
 set altformat_title=%f
@@ -23,7 +23,7 @@ set color_titleline_bg=blue
 set color_titleline_fg=white
 set color_win_attr=default
 set color_win_bg=default
-set color_win_cur=lightyellow
+set color_win_cur=yellow
 set color_win_cur_sel_attr=default
 set color_win_cur_sel_bg=blue
 set color_win_cur_sel_fg=lightyellow
@@ -57,13 +57,13 @@ set dsp.roar.role=
 set dsp.roar.server=
 set follow=false
 set format_current= %a - %t%= %y 
-set format_playlist= %-21%a %3n. %t%= %y %d %{?X!=0?%3X ?    }
-set format_playlist_va= %-21%A %3n. %t (%a)%= %y %d %{?X!=0?%3X ?    }
-set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}- %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle} 
-set format_title=%t - %a
-set format_trackwin=%3n. %t%= %y %d 
+set format_playlist= %-21%a -  %t%= %d
+set format_playlist_va= %-21%A  -  %t%= %d
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}%= %1{follow}%1{repeat}%1{shuffle} %{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}
+set format_title=%t
+set format_trackwin=%3n. %t%= %d 
 set format_trackwin_album= %l 
-set format_trackwin_va=%3n. %t (%a)%= %y %d 
+set format_trackwin_va=%3n. %t%= %d 
 set format_treewin=  %l
 set format_treewin_artist=%a
 set icecast_default_charset=ISO-8859-1
@@ -115,7 +115,6 @@ bind common 7 view settings
 bind common ; win-toggle
 bind common = vol +10%
 bind common G win-bottom
-bind common M toggle play_library
 bind common R refresh
 bind common U win-update-cache
 bind common [ vol +1% +0
@@ -131,7 +130,6 @@ bind common j win-down
 bind common k win-up
 bind common l player-next
 bind common left seek -5
-bind common m toggle aaa_mode
 bind common mlb_click_selected win-activate
 bind common q quit -i
 bind common r toggle repeat
