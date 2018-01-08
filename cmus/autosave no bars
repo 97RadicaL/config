@@ -57,8 +57,8 @@ set dsp.roar.role=
 set dsp.roar.server=
 set follow=false
 set format_current= %a - %t%= %y 
-set format_playlist= %-30%a  %3n. %t%= %d
-set format_playlist_va= %-30%a  %3n. %t%= %d
+set format_playlist= %-30%a  %t%= %d
+set format_playlist_va= %-30%a  %t%= %d
 set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}%= %1{follow}%1{repeat}%1{shuffle} %{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}
 set format_title=%t
 set format_trackwin=%3n. %t%= %d 
@@ -77,7 +77,7 @@ set mouse=false
 set output_plugin=pulse
 set passwd=
 set pl_sort=
-set play_library=true
+set play_library=false
 set play_sorted=false
 set repeat=false
 set repeat_current=false
