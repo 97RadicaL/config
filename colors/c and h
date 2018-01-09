@@ -1,0 +1,48 @@
+URxvt*font: xft:lime:size=8:antialias=true
+URxvt*boldFont: xft:lime:size=8:antialias=true
+URxvt*letterSpace: 0
+URxvt*scrollBar: false
+URxvt*cursorColor: #FFFFFF
+URxvt*cursorBlink: false
+URxvt*cursorUnderline: false
+URxvt*internalBorder: 10
+URxvt*geometry: 75x20
+
+*background:            #1A1E21
+*foreground:            #FFFFFF
+*cursorColor:           #FFFFFF
+*pointerColorBackground:#ff6e00
+*pointerColorForeground:#39ff00
+
+#define S_one           #6B92EF
+#define S_two           #D87C19
+#define S_three         #88AEF5
+#define S_four          #80AB70
+#define S_five          #ADDD69
+#define S_six           #B7BBA6
+#define S_seven         #D7E2D3
+#define S_eight         #F4F8F8
+
+#define S_ranger1       #88AEF5
+#define S_ranger2       #D87C19
+#define S_ranger3       #80AB70
+
+#define S_vim1          #D87C19
+
+*color0:                S_one
+*color1:                S_two
+*color2:                S_three
+*color3:                S_four
+*color4:                S_five
+*color5:                S_six
+*color6:                S_seven
+*color7:                S_eight
+*color8:                #FFFFFF
+*color9:                S_six
+*color10:               S_ranger2
+*color11:               S_ranger3
+*color12:               S_ranger1
+*color13:               S_vim1
+*color14:               S_five
+*color15:               S_one
+*color16:               #C70039
