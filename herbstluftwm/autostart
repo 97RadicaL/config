@@ -16,6 +16,7 @@ hc keyunbind --all
 # startup apps
 pkill tint2
 tint2 &
+tint2 -c ~/.config/tint2/tint2rc-ws &
 compton &
 xrdb ~/.Xresources &
 xbindkeys &
@@ -38,6 +39,7 @@ hc keybind $Mod-w spawn firefox-esr
 hc keybind $Mod-Shift-w spawn google-chrome
 hc keybind $Mod-t spawn urxvt -e htop
 hc keybind $Mod-r spawn urxvt -e ranger
+hc keybind $Mod-Shift-t spawn urxvt -e rainbowstream
 hc keybind $Mod-m spawn urxvt -e cmus
 hc keybind $Mod-Shift-m spawn urxvt -e cava
 hc keybind $Mod-c spawn urxvt -e calcurse
@@ -92,6 +94,7 @@ hc keybind $Mod-Control-Left    resize left +$resizestep
 hc keybind $Mod-Control-Down    resize down +$resizestep
 hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
+
 hc keybind $Mod-g cycle_value window_gap 10 0
 hc keybind $Mod-Shift-g cycle_value frame_transparent_width 0 4
 
@@ -102,7 +105,6 @@ hc keybind $Mod-f fullscreen toggle
 hc keybind $Mod-p pseudotile toggle
 
 hc keybind $Mod-b load '(split horizontal:0.680000:1 (clients vertical:0) (split vertical:0.600000:1 (clients vertical:0) (clients vertical:0 0x1600009)))'
-
 hc keybind $Mod-n load '(split horizontal:0.680000:0 (split horizontal:0.830000:0 (split vertical:0.600000:0 (split horizontal:0.290000:0 (split vertical:0.440000:0 (split horizontal:0.160000:1 (clients vertical:0) (split vertical:0.180000:1 (clients vertical:0) (clients vertical:0 0x1000009))) (clients vertical:0)) (split vertical:0.740000:1 (clients vertical:0) (clients vertical:0 0x1400009))) (split horizontal:0.569900:0 (clients vertical:0) (clients vertical:0))) (clients vertical:0)) (split horizontal:0.900000:0 (split vertical:0.100000:1 (clients vertical:0) (split vertical:0.900000:0 (clients vertical:0 0x1e00009) (clients vertical:0))) (clients vertical:0)))'
 
 # The following cycles through the available layouts within a frame, but skips
@@ -126,8 +128,8 @@ hc keybind $Mod-Shift-Tab   cycle_all -1
 #hc keybind $Mod-i jumpto urgent
 
 # tags
-tag_names=("  " "  " "  " "  " "  ")
-tag_keys=( {1..5} 0 )
+tag_names=("  " "  " "  " "  ")
+tag_keys=( {1..4} 0 )
 
 hc rename default "${tag_names[0]}" || true
 for i in ${!tag_names[@]} ; do
