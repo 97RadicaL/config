@@ -83,7 +83,7 @@ border_color_pressed = #eaeaea 44
 #-------------------------------------
 # Panel
 panel_items = T
-panel_size = 120 25
+panel_size = 117 25
 panel_margin = 10 12
 panel_padding = 0 0 0
 panel_background_id = 6
