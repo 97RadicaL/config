@@ -16,7 +16,9 @@ hc keyunbind --all
 # startup apps
 pkill tint2
 tint2 &
-tint2 -c ~/.config/tint2/tint2rc-clock &
+tint2 -c ~/.config/tint2/tint2rc-ws &
+tint2 -c ~/.config/tint2/tint2rc-task &
+tint2 -c ~/.config/tint2/tint2rc-clockbatt &
 compton &
 xrdb ~/.Xresources &
 xbindkeys &
