@@ -3,46 +3,42 @@ URxvt*boldFont: xft:kakwafont:size=8:antialias=true
 URxvt*letterSpace: 0
 URxvt*scrollBar: false
 URxvt*cursorColor: #FFFFFF
-URxvt*cursorBlink: true
+URxvt*cursorBlink: false
 URxvt*cursorUnderline: false
 URxvt*internalBorder: 8
 URxvt*geometry: 67x21
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
 
-*background:            #333737
-*foreground:            #FFFFFF
-*cursorColor:           #FFFFFF
-*pointerColorBackground:#B3794D
-*pointerColorForeground:#1A1E21
+#define S_bg #1A1E21
 
-#define S_one           #372F28
-#define S_two           #453B32
-#define S_three         #5F5349
-#define S_four          #7B6B5F
-#define S_five          #97887A
-#define S_six           #B3A89B
-#define S_seven         #CFC9BF
-#define S_eight         #E9EBE7
+#define S_one   #1F3137
+#define S_two   #42544D
+#define S_three #6A6551
+#define S_four  #A69C75
+#define S_five  #CEBC8D
+#define S_six   #436A72
+#define S_seven #54838E
+#define S_eight #EFEFEF
 
-#define S_ranger1       #97887A
-#define S_ranger2       #CFC9BF
-#define S_ranger3       #B3A89B
+*background:  #1A1E21
+*foreground:  #FFFFFF
+*cursorcolor: #FFFFFF
 
-#define S_vim1          #C4BAB1
-
-*color0:                S_one
-*color1:                S_two
-*color2:                S_three
-*color3:                S_four
-*color4:                S_five
-*color5:                S_six
-*color6:                S_seven
-*color7:                S_eight
-*color8:                #E9EBE7
-*color9:                #B3A89B
-*color10:               S_ranger2
-*color11:               S_ranger3
-*color12:               S_ranger1
-*color13:               S_vim1
-*color14:               S_five
-*color15:               S_one
-*color16:               #C70039
+*color0:  S_bg
+*color1:  S_two
+*color2:  S_three
+*color3:  S_four
+*color4:  S_five
+*color5:  S_six
+*color6:  S_seven
+*color7:  S_eight
+*color8:  S_one
+*color9:  S_two
+*color10: S_three
+*color11: S_four
+*color12: S_five
+*color13: S_six
+*color14: S_seven
+*color15: S_eight
