@@ -36,7 +36,7 @@ hc keybind $Mod-Shift-q close_and_remove
 
 # shortcuts
 hc keybind $Mod-Return spawn urxvt
-hc keybind $Mod-d spawn dmenu_run
+hc keybind $Mod-d spawn dmenu_run -fn kakwafont -p $ -nb '#42544D' -sb '#A69C75'
 hc keybind $Mod-w spawn firefox-esr
 hc keybind $Mod-Shift-w spawn google-chrome
 hc keybind $Mod-t spawn urxvt -e htop
@@ -107,7 +107,18 @@ hc keybind $Mod-f fullscreen toggle
 hc keybind $Mod-p pseudotile toggle
 
 hc keybind $Mod-b load '(split horizontal:0.680000:1 (clients vertical:0) (split vertical:0.600000:1 (clients vertical:0) (clients vertical:0 0x1600009)))'
-hc keybind $Mod-n load '(split horizontal:0.680000:0 (split horizontal:0.830000:0 (split vertical:0.600000:0 (split horizontal:0.290000:0 (split vertical:0.440000:0 (split horizontal:0.160000:1 (clients vertical:0) (split vertical:0.180000:1 (clients vertical:0) (clients vertical:0 0x1000009))) (clients vertical:0)) (split vertical:0.740000:1 (clients vertical:0) (clients vertical:0 0x1400009))) (split horizontal:0.569900:0 (clients vertical:0) (clients vertical:0))) (clients vertical:0)) (split horizontal:0.900000:0 (split vertical:0.100000:1 (clients vertical:0) (split vertical:0.900000:0 (clients vertical:0 0x1e00009) (clients vertical:0))) (clients vertical:0)))'
+hc keybind $Mod-n load '(split horizontal:0.850000:0
+(split horizontal:0.200000:1
+(clients vertical:0)
+(clients grid:0))
+(clients vertical:0))
+'               # load predefined layout
+# center all other gimp windows on gimp tag
+hc rule class=Gimp tag=gimp index=01 pseudotile=on
+hc rule class=Gimp windowrole~'gimp-(image-window|toolbox|dock)' \
+pseudotile=off
+hc rule class=Gimp windowrole=gimp-toolbox focus=off index=00
+hc rule class=Gimp windowrole=gimp-dock focus=off index=1
 
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
@@ -167,7 +178,7 @@ hc attr theme.active.color '#A69C75'
 hc attr theme.normal.color '#42544D'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
-hc attr theme.inner_color black
+hc attr theme.inner_color gray
 hc attr theme.border_width 2
 hc attr theme.floating.border_width 2
 hc attr theme.floating.outer_width 0
@@ -182,9 +193,6 @@ hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
 hc set focus_follows_mouse 1
-
-
-
 
 
 # rules
