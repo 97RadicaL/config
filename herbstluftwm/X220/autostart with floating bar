@@ -15,10 +15,10 @@ hc keyunbind --all
 
 # startup apps
 pkill tint2
-tint2 &
-tint2 -c ~/.config/tint2/tint2rc-ws &
-tint2 -c ~/.config/tint2/tint2rc-task &
-tint2 -c ~/.config/tint2/tint2rc-clockbatt &
+tint2 -c ~/.config/tint2/f/tint2rc-border &
+tint2 -c ~/.config/tint2/f/tint2rc-ws &
+tint2 -c ~/.config/tint2/f/tint2rc-task &
+tint2 -c ~/.config/tint2/f/tint2rc-clockbatt &
 compton &
 xrdb ~/.Xresources &
 xbindkeys &
@@ -45,7 +45,7 @@ hc keybind $Mod-Shift-t spawn urxvt -e rainbowstream
 hc keybind $Mod-m spawn urxvt -e cmus
 hc keybind $Mod-Shift-m spawn urxvt -e cava
 hc keybind $Mod-c spawn urxvt -e calcurse
-hc keybind Control-Alt-l spawn i3lock -i ~/Pictures/stuff/i3lock.png
+hc keybind Control-Alt-l spawn i3lock -f -i ~/Pictures/hlwm/i3lock.png
 # browsers
 # palemoon firefox_old firefox-esr
 
