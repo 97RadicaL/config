@@ -83,7 +83,7 @@ border_color_pressed = #eaeaea 44
 #-------------------------------------
 # Panel
 panel_items = LTC
-panel_size = 1064 22
+panel_size = 1065 22
 panel_margin = 94 12
 panel_padding = 0 0 2
 panel_background_id = 6
@@ -133,7 +133,7 @@ task_centered = 1
 urgent_nb_of_blink = 100000
 task_maximum_size = 150 34
 task_padding = 8 2 2
-task_font = kakwafont 8
+task_font = kakwafont 9
 task_tooltip = 0
 task_font_color = #ffffff 100
 task_background_id = 0
