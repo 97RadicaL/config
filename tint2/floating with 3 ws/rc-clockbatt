@@ -83,7 +83,7 @@ border_color_pressed = #eaeaea 44
 #-------------------------------------
 # Panel
 panel_items = BC
-panel_size = 196 22
+panel_size = 195 22
 panel_margin = 12 12
 panel_padding = 0 0 8
 panel_background_id = 6
