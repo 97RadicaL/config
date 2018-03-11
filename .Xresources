@@ -2,7 +2,6 @@ URxvt*font: xft:kakwafont:size=8:antialias=true
 URxvt*boldFont: xft:kakwafont:size=8:antialias=true
 URxvt*letterSpace: 0
 URxvt*scrollBar: false
-URxvt*cursorColor: #FFFFFF
 URxvt*cursorBlink: false
 URxvt*cursorUnderline: false
 URxvt*internalBorder: 8
