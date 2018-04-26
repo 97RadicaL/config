@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# slick herbstluftwm config
+# slick x200 herbstluftwm config
 
 hc() {
     herbstclient "$@"
@@ -16,16 +16,15 @@ hc keyunbind --all
 # startup apps
 pkill tint2
 pkill xbindkeys
-tint2 -c ~/.config/tint2/fbrwn1/tint2rc-border &
-tint2 -c ~/.config/tint2/fbrwn1/tint2rc-ws &
-tint2 -c ~/.config/tint2/fbrwn1/tint2rc-task &
-tint2 -c ~/.config/tint2/fbrwn1/tint2rc-clockbatt &
+tint2 -c ~/.config/tint2/f-bar/siji/blue3/tint2rc-border &
+tint2 -c ~/.config/tint2/f-bar/siji/blue3/tint2rc-ws &
+tint2 -c ~/.config/tint2/f-bar/siji/blue3/tint2rc-task &
+tint2 -c ~/.config/tint2/f-bar/siji/blue3/tint2rc-clockbatt &
 compton &
 xrdb ~/.Xresources &
 xbindkeys &
-pactl set-sink-volume 0 90% &
-feh --bg-fill ~/.wallpaper.png --no-fehbg &
-xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
+pactl set-sink-volume 0 100% &
+feh --bg-fill ~/.wallpaper.png --no-fehbg
 
 # Mod1=alt Mod4=super
 Mod=Mod4
@@ -38,13 +37,14 @@ hc keybind $Mod-Shift-q close_and_remove
 
 # shortcuts
 hc keybind $Mod-Return spawn urxvt
-hc keybind $Mod-d spawn dmenu_run -fn kakwafont -p $ -nb '#4a4a4a' -sb '#979797'
+hc keybind $Mod-d spawn dmenu_run -fn kakwafont -p $ -nb '#0f0f0f' -sb '#4a4a4a'
 hc keybind $Mod-w spawn firefox-esr
 hc keybind $Mod-Shift-w spawn google-chrome-stable
 hc keybind $Mod-t spawn urxvt -e htop
 hc keybind $Mod-r spawn urxvt -e ranger
-hc keybind $Mod-Shift-t spawn urxvt -e rainbowstream
+#hc keybind $Mod-Shift-t spawn urxvt -e rainbowstream
 hc keybind $Mod-m spawn urxvt -e cmus
+hc keybind $Mod-Shift-m spawn urxvt -e cava
 hc keybind $Mod-c spawn urxvt -e calcurse
 hc keybind Control-Alt-l spawn i3lock -f -i ~/Pictures/hlwm/i3lock.png
 
@@ -53,6 +53,8 @@ hc keybind Print spawn scrot 'scrot_%Y-%m-%d-%S_$wx$h.png'
 
 # padding
 hc pad 0 37 0 0 0
+#hc pad 0 27 0 0 0
+hc set snap_gap 0
 
 # basic movement
 # focusing clients
@@ -96,8 +98,9 @@ hc keybind $Mod-Control-Down    resize down +$resizestep
 hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
-hc keybind $Mod-g cycle_value window_gap 10 0
-hc keybind $Mod-Shift-g cycle_value frame_transparent_width 0 4
+# frame and gap
+hc keybind $Mod-g cycle_value frame_transparent_width 0 4
+hc keybind $Mod-Shift-g cycle_value window_gap 10 0
 
 # layouting
 hc keybind $Mod-BackSpace remove
@@ -141,7 +144,8 @@ hc keybind $Mod-Shift-Tab   cycle_all -1
 #hc keybind $Mod-i jumpto urgent
 
 # tags
-tag_names=("  " "  " "  ")
+#tag_names=("  " "  " "  ")
+tag_names=("" "" "")
 tag_keys=( {1..3} 0 )
 
 hc rename default "${tag_names[0]}" || true
@@ -154,10 +158,10 @@ for i in ${!tag_names[@]} ; do
     fi
 done
 
-
 # cycle through tags
 hc keybind $Mod-period use_index +1 --skip-visible
 hc keybind $Mod-comma  use_index -1 --skip-visible
+hc keybind $Mod-Shift-BackSpace use_previous
 
 # theme
 hc attr theme.tiling.reset 1
@@ -174,8 +178,8 @@ hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
 hc set frame_gap 0
 
-hc attr theme.active.color '#968D6F'
-hc attr theme.normal.color '#3C3D39'
+hc attr theme.active.color '#75634d'
+hc attr theme.normal.color '#393c4f'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color gray
